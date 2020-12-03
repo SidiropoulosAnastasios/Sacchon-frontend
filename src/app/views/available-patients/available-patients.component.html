@@ -1,0 +1,26 @@
+<h2>Available Patients</h2>
+<table>
+  <thead>
+    <tr class="table_info">
+      <th>ID</th>
+      <th>Full Name</th>
+      <th>Date of Birth</th>
+      <th>Gender</th>
+      <th>Diabetes Type</th>
+      <th>Date First Diagnosed</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let patient of patients">
+    <td router-link="doctors/id/patients/id">{{patient.id}}</td>
+    <td>{{patient.name}}</td>
+    <td>{{patient.dob}}</td>
+    <td>{{patient.gender}}</td>
+    <td>{{patient.diabetesType}}</td>
+    <td>{{patient.dateDiagnosed}}</td>
+  </tr>
+</table>
+
+<!-- that form represent the available patient without having a doctor,
+     are availabe for being choosen by a doctor,
+     that form contains name,date of birth, gender, diabetes type and date of diagnose 
+  -->

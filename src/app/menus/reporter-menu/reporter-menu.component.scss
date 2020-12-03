@@ -1,0 +1,31 @@
+.sidenav {
+    height: 87.8%; /* Full-height: remove this if you want "auto" height */
+    width: 160px; /* Set the width of the sidebar */
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    top: 55px; /* Stay at the top */
+    left: 0;
+    background-color: #1b1f23; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+    
+  }
+  
+  .sidenav a {
+    padding: 20px 10px 30px 14px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border-bottom: 1px solid white;
+    
+  }
+  
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+ 
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

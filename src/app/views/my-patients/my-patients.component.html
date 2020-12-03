@@ -1,0 +1,27 @@
+<h2>My Patients</h2>
+<table>
+  <thead>
+    <tr class="table_info">
+      <th>ID</th>
+      <th>Full Name</th>
+      <th>Date of Birth</th>
+      <th>Gender</th>
+      <th>Diabetes Type</th>
+      <th>Date First Diagnosed</th>
+      <th>Measurements</th>
+      <th>Consultations</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let patient of patients">
+    <td>{{patient.id}}</td>
+    <td>{{patient.name}}</td>
+    <td>{{patient.dob}}</td>
+    <td>{{patient.gender}}</td>
+    <td>{{patient.diabetesType}}</td>
+    <td>{{patient.dateDiagnosed}}</td>
+    <td> <a [routerLink]="['/doctors/measurements-doctor', patient.id]"> View</a> </td>
+    <td> <a [routerLink]="['/doctors/consultations-doctor/', patient.id]"> View</a> </td>
+  </tr>
+</table>
+
+<router-outlet></router-outlet>

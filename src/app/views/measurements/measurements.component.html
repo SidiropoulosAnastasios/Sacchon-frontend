@@ -1,0 +1,46 @@
+<br>
+
+<h2>Add a new Measurement</h2>
+<form [formGroup]="addmeasurementForm">
+    <input formControlName="date" placeholder="date" type="date">
+    <div *ngIf="addmeasurementForm.get('date').errors?.required && addmeasurementForm.get('date').invalid && addmeasurementForm.get('date').dirty">
+      Field is required
+    </div>
+    <br>
+    <input formControlName="glucoseLevel" placeholder="glucoseLevel">
+    <div *ngIf="addmeasurementForm.get('glucoseLevel').errors?.required && addmeasurementForm.get('glucoseLevel').invalid && addmeasurementForm.get('glucoseLevel').dirty">
+      Field is required
+    </div>
+    <br>
+    <input formControlName="carbIntake" placeholder="carbIntake">
+    <div *ngIf="addmeasurementForm.get('carbIntake').errors?.required && addmeasurementForm.get('carbIntake').invalid && addmeasurementForm.get('carbIntake').dirty">
+      Field is required
+    </div>
+    <br>
+    <button class="btn btn-primary" type="submit" (click)="addmeasurement()">Add Measurement</button>
+</form>
+
+<br>
+
+<h2>My Measurements</h2>
+<table>
+  <thead>
+    <tr class="table_info">
+      <th>ID</th>
+      <th>Date</th>
+      <th>Glucose Level</th>
+      <th>Carb Intake</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tr *ngFor="let measurement of measurements">
+    <!-- <td router-link="doctors/id/patients/id">{{patient.id}}</td> -->
+    <td>{{measurement.id}}</td>
+    <td>{{measurement.date}}</td>
+    <td>{{measurement.glucoseLevel}}</td>
+    <td>{{measurement.carbIntake}}</td>
+    <td> <a [routerLink]="['/patients/measurement/',measurement.id]"> Modify</a> </td>  
+  </tr>
+</table>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,22 @@
+<br>
+
+<h2>My Consultations</h2>
+<table>
+  <thead>
+    <tr class="table_info">
+      <th>ID</th>
+      <th>Date</th>
+      <th>Medication</th>
+      <th>Dosage</th>
+      <th>Extra Info</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let consultation of consultations">
+    <!-- <td router-link="doctors/id/patients/id">{{patient.id}}</td> -->
+    <td>{{consultation.id}}</td>
+    <td>{{consultation.date}}</td>
+    <td>{{consultation.medication}}</td>
+    <td>{{consultation.dosage}}</td>
+    <td>{{consultation.extraInfo}}</td>
+  </tr>
+</table>

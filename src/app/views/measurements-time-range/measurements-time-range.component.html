@@ -1,0 +1,32 @@
+
+<!--here the reporter is able to see the main form
+    who can decide which of the dates want to see 
+    for the average measurement of the patient
+-->
+<h3>Set a time range for average measurements of patient</h3>
+<div>
+    <input formControlName="startDate" placeholder="Start Date">
+    <input formControlName="endDate" placeholder="End Date">
+</div>
+
+<!--this table shows the result which the reporter has decided to see
+    about the measurements of each patient
+-->
+<h3>Measurements of the requested time range</h3>
+<table>
+  <thead>
+    <tr class="table_info">
+      <th>ID</th>
+      <th>Date</th>
+      <th>Glucose Level</th>
+      <th>Carb Intake</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let measurement of measurements">
+    <td router-link="doctors/id/patients/id">{{patient.id}}</td>
+    <td>{{measurement.id}}</td>
+    <td>{{measurement.date}}</td>
+    <td>{{measurement.glucoseLevel}}</td>
+    <td>{{measurement.carbIntake}}</td>
+  </tr>
+</table>

@@ -1,0 +1,72 @@
+<div class="signup-page">
+  <div class="form">
+    <div class="signup">
+      <div class="signup-header">
+        <h3>REGISTER</h3>
+        <p>Please fill in this form</p>
+      </div>
+    </div>
+  </div>
+</div>
+<form [formGroup]="signupform">
+  <div class="form-group mr-2">
+    <input type="text" id="Name" class="form-control" name="name" placeholder="Insert your full name" formControlName="name">
+      <div *ngIf="signupform.get('name').errors?.required && signupform.get('name').invalid && signupform.get('name').dirty">
+        Field is required
+      </div>
+  </div>
+  <div class="form-group mr-2">
+    <input type="date" id="Dob" class="form-control" name="dob" placeholder="Date of Birth" formControlName="dob">
+    Date of Birth
+    <div *ngIf="signupform.get('dob').errors?.required && signupform.get('dob').invalid && signupform.get('dob').dirty">
+        Field is required
+    </div>
+  </div>
+  <div class="form-group mr-2">
+    <input type="text" id="Gender" class="form-control" name="gender" placeholder="gender" formControlName="gender">
+    <div *ngIf="signupform.get('gender').errors?.required && signupform.get('gender').invalid && signupform.get('gender').dirty">
+        Field is required
+    </div>
+  </div>
+  <div class="form-group mr-2">
+    <input type="text" id="diabetesType" class="form-control" name="diabetesType" placeholder="Type of Diabetes" formControlName="diabetesType">
+      <div *ngIf="signupform.get('diabetesType').errors?.required && signupform.get('diabetesType').invalid && signupform.get('diabetesType').dirty">
+        Field is required
+      </div>
+  </div>
+  <div class="form-group mr-2">
+    <input type="date" id="DateDiagnosed" class="form-control" name="dateDiagnosed" placeholder="Date first diagnosed" formControlName="dateDiagnosed">
+     Date Diagnosed Diabetes
+    <div *ngIf="signupform.get('dateDiagnosed').errors?.required && signupform.get('dateDiagnosed').invalid && signupform.get('dateDiagnosed').dirty">
+        Field is required
+    </div>
+  </div>
+  <div class="form-group mr-2">
+    <input type="text" id="Username" class="form-control" name="username" placeholder="username" formControlName="username">
+    <div *ngIf="signupform.get('username').errors?.required && signupform.get('username').invalid && signupform.get('username').dirty">
+        Field is required
+    </div>
+  </div>
+  <div class="form-group mr-2">
+    <input type="text" id="password" class="form-control" name="password" placeholder="password" formControlName="password" type="password">
+    <div *ngIf="signupform.get('password').errors?.required && signupform.get('password').invalid && signupform.get('password').dirty">
+        Field is required
+    </div>
+  </div>
+  <div>
+    <input type="text" id="password2" class="form-control" name="password2" placeholder="repeat password" formControlName="repeat password" type="password">
+    <div *ngIf="signupform.get('password2').errors?.required && signupform.get('password2').invalid && signupform.get('password2').dirty">
+        Field is required
+    </div>
+  </div>
+  <div>
+    <button class="btn btn-primary" (click)="signUp()">Sign Up</button>
+  </div>
+</form>
+
+
+
+<!--the main form of a new member for the 
+    patients,all that fields must be applied 
+    by the patient for the correct usage of application 
+  -->

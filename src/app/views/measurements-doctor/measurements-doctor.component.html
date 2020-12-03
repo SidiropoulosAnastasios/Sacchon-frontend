@@ -1,0 +1,17 @@
+<h2>Measurements of Patient</h2>
+<table>
+  <thead>
+    <tr class="table_info">
+      <th>ID</th>
+      <th>Date</th>
+      <th>GlucoseLevel</th>
+      <th>CarbIntake</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let measurement of measurements">
+    <td>{{measurement?.id}}</td>
+    <td>{{measurement?.date}}</td>
+    <td>{{measurement?.glucoseLevel}}</td>
+    <td>{{measurement?.carbIntake}}</td>
+  </tr>
+</table>

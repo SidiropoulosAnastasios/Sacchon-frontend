@@ -1,0 +1,36 @@
+<br>
+<h2>Patients with no activity over a time range</h2>
+<form [formGroup]="calendarForm">
+  <div>
+    <input formControlName="startDate" placeholder="Start Date" type="date">
+    <input formControlName="endDate" placeholder="End Date" type="date">
+  </div>
+  <button class="btn btn-primary" type="submit" (click)="adddates()">Submit Range</button>
+</form>
+<br>
+<br>
+<h2>Patients with no activity</h2>
+<table>
+  <thead>
+    <tr class="table_info">
+      <th>Full Name</th>
+      <th>Date of Birth</th>
+      <th>Gender</th>
+      <th>Diabetes Type</th>
+      <th>Date First Diagnosed</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let patient of patients">
+    <td>{{patient?.name}}</td>
+    <td>{{patient?.dob}}</td>
+    <td>{{patient?.gender}}</td>
+    <td>{{patient?.diabetesType}}</td>
+    <td>{{patient?.dateDiagnosed}}</td>
+  </tr>
+</table>
+
+
+<!-- this form has got the fields of patient 
+     with no activity, are included the name, date of birth
+     gender, diabetes type and date of first diagnose
+-->

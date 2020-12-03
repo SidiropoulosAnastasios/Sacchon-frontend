@@ -1,0 +1,32 @@
+.table_info{
+    background-color: #343a40;
+    color:white;
+  }
+  table, h2 {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width:80%;
+  margin-left: 180px; /* Same as the width of the sidebar */
+  padding: 25px 10px; 
+  
+  }
+  
+  td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+  background-color: #343a40;
+  color:white;
+  }
+
+  input{
+    width: 30%;
+  }
+  
+  form{
+    margin-top: 1%;
+    margin-left:10%;
+  }

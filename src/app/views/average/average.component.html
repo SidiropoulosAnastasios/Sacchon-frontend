@@ -1,0 +1,29 @@
+<h3>Set a range for average measurements</h3>
+<form [formGroup]="calendarForm">
+  <div>
+    <input formControlName="startDate" placeholder="Start Date" type="date">
+    <input formControlName="endDate" placeholder="End Date" type="date">
+  </div>
+  <button class="btn btn-primary" type="submit" (click)="adddates()">Submit Range</button>
+</form>
+<br>
+<br>
+<h2>Averages Of Patient</h2>
+<table>
+  <thead>
+    <tr class="table_info">
+      <th>Glucose Level</th>
+      <th>Carb Intake</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>{{averages?.glucoseLevel}}</td>
+    <td>{{averages?.carbIntake}}</td>
+  </tr>
+</table>
+
+
+<!-- that form has got the average of measurement of each patient
+     he/she is able to select different dates which contains information
+     about the Glugose level and Carb Intake.
+-->

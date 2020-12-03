@@ -1,0 +1,22 @@
+<br>
+<h2>Patients Waiting for Consultation</h2>
+<table>
+  <thead>
+    <tr class="table_info">
+      <th>Full Name</th>
+      <th>Date of Birth</th>
+      <th>Gender</th>
+      <th>Diabetes Type</th>
+      <th>Date First Diagnosed</th>
+      <th>Time elapsed</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let patient of patientsConsultationTimeElapsed">
+    <td>{{patient.name}}</td>
+    <td>{{patient.dob}}</td>
+    <td>{{patient.gender}}</td>
+    <td>{{patient.diabetesType}}</td>
+    <td>{{patient.dateDiagnosed}}</td>
+    <td>{{patient.days}}</td>
+  </tr>
+</table>

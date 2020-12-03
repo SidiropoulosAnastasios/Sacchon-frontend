@@ -1,0 +1,56 @@
+<br>
+<h2>Consultation of Patient</h2>
+<table>
+  <thead>
+    <tr class="table_info">
+      <th>ID</th>
+      <th>Date</th>
+      <th>Medication</th>
+      <th>Dosage</th>
+      <th>Extra Info</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>{{consultation?.id}}</td>
+    <td>{{consultation?.date}}</td>
+    <td>{{consultation?.medication}}</td>
+    <td>{{consultation?.dosage}}</td>
+    <td>{{consultation?.extraInfo}}</td>
+  </tr>
+</table>
+
+<br>
+<br>
+
+<h2>Edit the Consultation</h2>
+<form [formGroup]="editconsultationForm">
+  <input formControlName="date" placeholder="Date" type="date">
+  <div *ngIf="editconsultationForm.get('date').errors?.required && editconsultationForm.get('date').invalid && editconsultationForm.get('date').dirty">
+    Field is required
+  </div>
+  <br>
+  <input formControlName="medication" placeholder="Medication">
+  <div *ngIf="editconsultationForm.get('medication').errors?.required && editconsultationForm.get('medication').invalid && editconsultationForm.get('medication').dirty">
+    Field is required
+  </div>
+  <br>
+  <input formControlName="dosage" placeholder="Dosage">
+  <div *ngIf="editconsultationForm.get('dosage').errors?.required && editconsultationForm.get('dosage').invalid && editconsultationForm.get('dosage').dirty">
+    Field is required
+  </div>
+  <br>
+  <input formControlName="extraInfo" placeholder="Extra Info">
+  <div *ngIf="editconsultationForm.get('extraInfo').errors?.required && editconsultationForm.get('extraInfo').invalid && editconsultationForm.get('extraInfo').dirty">
+    Field is required
+  </div>
+  <br>
+  <button class="btn btn-primary" type="submit" (click)="editconsultation()">Edit Consultation</button>
+
+  <br>
+  <br>
+  <!-- <button class="btn btn-primary" type="submit" (click)="removeconsultation()">Permanently Delete the Consultation</button>  -->
+  <!-- In case we want to include the feature for measurement delete-->
+</form>
+
+
+

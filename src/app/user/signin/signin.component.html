@@ -1,0 +1,29 @@
+<form [formGroup]="signinform">
+  <div class="form-group mr-2">
+    <h3>Sign In</h3>
+    <p>Please fill in this form</p>
+      <input 
+      type="text" 
+      id="Username" 
+      class="form-control" 
+      name="username" 
+      placeholder="username" 
+      formControlName="username">
+  </div>
+  <div class="form-group mr-2">
+  <input 
+      type="password" 
+      id="password" 
+      class="form-control" 
+      name="password" 
+      placeholder="password"
+      formControlName="password">
+  </div>
+  <button class="btn btn-primary" (click)="logIn()">Sign In</button>
+  <div>Not a Member?  <a [routerLink]="['/signup']">Click here</a></div>
+</form>
+
+
+<!--the main for that can be seen by 
+  patient,doctor and reporter,
+before the login in the app-->

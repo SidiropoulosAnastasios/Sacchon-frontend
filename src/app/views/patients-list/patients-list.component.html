@@ -1,0 +1,29 @@
+<br>
+<h2>Patients</h2>
+<table>
+  <thead>
+    <tr class="table_info">
+      <th>ID</th>
+      <th>Full Name</th>
+      <th>Date of Birth</th>
+      <th>Gender</th>
+      <th>Diabetes Type</th>
+      <th>Date First Diagnosed</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let patient of patientsList">
+    <td>{{patient.id}}</td>
+    <td>{{patient.name}}</td>
+    <td>{{patient.dob}}</td>
+    <td>{{patient.gender}}</td>
+    <td>{{patient.diabetesType}}</td>
+    <td>{{patient.dateDiagnosed}}</td>
+  </tr>
+</table>
+
+
+<!-- that HTML form containts all the information
+     for the patients list, so the can be seen by the reporter
+     it has go ID,name, date of birth, gender, diabetes type 
+     and date of first diagnose
+-->

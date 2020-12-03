@@ -1,0 +1,47 @@
+<br>
+<h2>My Measurement</h2>
+<table>
+  <thead>
+    <tr class="table_info">
+      <th>ID</th>
+      <th>Date</th>
+      <th>Glucose Level</th>
+      <th>Carb Intake</th>
+    </tr> 
+  </thead>
+  <tr>
+    <td>{{measurement?.id}}</td> 
+    <td>{{measurement?.date}}</td>
+    <td>{{measurement?.glucoseLevel}}</td>
+    <td>{{measurement?.carbIntake}}</td>
+  </tr>
+</table>
+
+<br>
+<br>
+
+<h2>Edit Measurement</h2>
+<form [formGroup]="editmeasurementForm">
+    <input formControlName="date" placeholder="date" type="date">
+    <div *ngIf="editmeasurementForm.get('date').errors?.required && editmeasurementForm.get('date').invalid && editmeasurementForm.get('date').dirty">
+      Field is required
+    </div>
+    <br>
+    <input formControlName="glucoseLevel" placeholder="glucoseLevel">
+    <div *ngIf="editmeasurementForm.get('glucoseLevel').errors?.required && editmeasurementForm.get('glucoseLevel').invalid && editmeasurementForm.get('glucoseLevel').dirty">
+      Field is required
+    </div>
+    <br>
+    <input formControlName="carbIntake" placeholder="carbIntake">
+    <div *ngIf="editmeasurementForm.get('carbIntake').errors?.required && editmeasurementForm.get('carbIntake').invalid && editmeasurementForm.get('carbIntake').dirty">
+      Field is required
+    </div>
+    <br>
+    <button class="btn btn-primary" type="submit" (click)="editmeasurement()">Edit Measurement</button>
+    <br>
+    <br>
+    
+    <!-- <button class="btn btn-primary" type="submit" (click)="removemeasurement()">Permanently delete the Measurement</button>  -->
+
+</form>
+
